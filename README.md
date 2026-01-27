@@ -1,6 +1,8 @@
-# 🧱 Bricks AI Tycoon
+# 🐧 Penguin Clicker
 
-A Telegram Mini App clicker game where you tap to earn, launch meme coins, and STOP BEING POOR!
+A Telegram Mini App clicker game where you tap to fish, build your igloo, and dominate the Antarctic!
+
+![Penguin Clicker](public/images/penguin-main.png)
 
 ## 🚀 Quick Start with Docker
 
@@ -10,7 +12,7 @@ A Telegram Mini App clicker game where you tap to earn, launch meme coins, and S
 
 ### 1. Setup Environment
 ```bash
-cd bricks-tycoon
+cd penguin-clicker
 cp .env.example .env.local
 ```
 
@@ -33,7 +35,7 @@ Open http://localhost:3000 in your browser.
 1. Message @BotFather
 2. Send `/mybots` → Select your bot
 3. Select "Bot Settings" → "Menu Button" or "Configure Mini App"
-4. Enter your deployed URL (after deploying to Vercel)
+4. Enter your deployed URL (from Netlify)
 
 ## 🛠️ Development Commands
 
@@ -51,54 +53,42 @@ docker-compose down
 docker-compose logs -f
 ```
 
-## 📦 Deploy to Vercel
+## 📦 Deploy to Netlify
 
-1. Push code to GitHub
-2. Go to vercel.com
-3. Import your repository
-4. Set environment variables
-5. Deploy!
-
-## 🔧 Environment Variables
-
-| Variable | Description |
-|----------|-------------|
-| `TELEGRAM_BOT_TOKEN` | Your bot token from BotFather |
-| `NEXT_PUBLIC_DEV_MODE` | Set to `true` for testing |
-| `NEXT_PUBLIC_PHANTOM_APP_ID` | From phantom.com/portal |
+1. Fork/Clone this repository
+2. Go to [Netlify](https://app.netlify.com)
+3. "Import from Git"
+4. Select repository
+5. Deploy! (Settings are pre-configured in `netlify.toml` / `next.config.js`)
 
 ## 📁 Project Structure
 
 ```
-bricks-tycoon/
+penguin-clicker/
 ├── app/                 # Next.js app router
-│   ├── layout.tsx      # Root layout with Telegram SDK
+│   ├── layout.tsx      # Root layout
 │   ├── page.tsx        # Main page
 │   └── globals.css     # Global styles
 ├── components/
 │   └── game/
-│       └── Game.tsx    # Main game component
-├── types/
-│   └── index.ts        # TypeScript types
+│       └── Game.tsx    # Core game logic
 ├── public/
-│   └── images/         # Game assets
+│   └── images/         # Game assets (Penguins, Backgrounds)
 ├── Dockerfile          # Development Dockerfile
-├── Dockerfile.prod     # Production Dockerfile
 └── docker-compose.yml  # Docker Compose config
 ```
 
 ## 🎮 Game Features
 
-- ✅ Tap to earn Bricks Bux
-- ✅ Idle income generation
-- ✅ 5 upgrades to buy
-- ✅ 4 luxury assets (Lambo, Yacht, etc.)
-- ✅ 3 employees for automation
-- ✅ Prestige system (Exit Scam)
+- ✅ Tap to earn Fish (🐟)
+- ✅ Idle income generation (Auto-Fishers)
+- ✅ 5 upgrades to buy (Rods, Nets, Boats)
+- ✅ 8 luxury assets (Shiny Pebble -> South Pole)
+- ✅ Staff recruitment (Baby Penguin, Emperor)
+- ✅ Prestige system (Migrate South)
 - 🔜 Coin launch simulator
 - 🔜 Telegram Cloud Storage
 - 🔜 Phantom wallet integration
-- 🔜 Token holder verification
 
 ## 📄 License
 
